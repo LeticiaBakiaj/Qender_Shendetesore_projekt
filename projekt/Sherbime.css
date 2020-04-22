@@ -1,0 +1,26 @@
+﻿p {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+ul.list {
+    list-style-type: circle;
+    list-style-position: outside;
+    align-content: center;
+    text-align-last: right;
+    margin: 100 px 100px 100px 100px;
+    padding: 10px 10px 10px 10px ;
+    color: red;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #528780;
+    font-style: italic;
+    font-size: 40px;
+}
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}

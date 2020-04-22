@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="QenderShendetesore.Master1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+	<!-- Site Icons -->
+	<link rel="shortcut icon" href="health-lab/images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="health-lab/images/apple-touch-icon.png">
+	
+
+	<!-- Bootstrap CSS -->
+	<link href="health-lab/css/bootstrap.min.css" rel="stylesheet" />
+	<!-- Pogo Slider CSS -->
+	<link href="health-lab/css/pogo-slider.min.css" rel="stylesheet" />
+	<!-- Site CSS -->
+	<link href="health-lab/css/style.css" rel="stylesheet" />
+	<!-- Responsive CSS -->
+	<link href="health-lab/css/responsive.css" rel="stylesheet" />
+	<!-- Custom CSS -->
+	<link href="health-lab/css/custom.css" rel="stylesheet" />
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    
+        <div>
+            
+	<!-- Start header -->
+	<header class="top-header">
+		<nav class="navbar header-nav navbar-expand-lg">
+			<div class="container">
+				<asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Kryefaqja.aspx" CssClass="navbar-brand"> <asp:Image ID="Image1" runat="server"  ImageUrl="~/health-lab/images/logonew.png" AlternateText="Logo"/></asp:HyperLink>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+					
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+					<ul class="navbar-nav">
+						<li><asp:HyperLink ID="HyperLink7" runat="server" CssClass="nav-link active" NavigateUrl="#home"></asp:HyperLink></li>
+						
+						<li><asp:HyperLink ID="HyperLink9" runat="server" CssClass="nav-link"  NavigateUrl="~/Kryefaqja.aspx#rreth_nesh">Rreth Nesh</asp:HyperLink></li>
+						<li><asp:HyperLink ID="HyperLink10" runat="server" CssClass="nav-link" NavigateUrl="~/Kryefaqja.aspx#sherbimet">Sherbime</asp:HyperLink></li>
+						<li><asp:HyperLink ID="HyperLink11" runat="server" CssClass="nav-link" NavigateUrl="~/Kryefaqja.aspx#galeria">Galeria</asp:HyperLink></li>
+						<li><asp:HyperLink ID="HyperLink12" runat="server" CssClass="nav-link" NavigateUrl="~/Kryefaqja.aspx#doktore">Doktor</asp:HyperLink></li>
+						<li><asp:HyperLink ID="HyperLink13" runat="server" CssClass="nav-link" NavigateUrl="~/Kryefaqja.aspx#kontakt">Kontakt</asp:HyperLink></li>
+						<li><asp:HyperLink ID="HyperLink14" runat="server" CssClass="nav-link" NavigateUrl="~/Rezervim/Rezervim.aspx">Rezervim</asp:HyperLink></li>
+						<li>  <div class="dropdown">
+                                  <button class="dropbtn">Profil</button>
+                                      <div class="dropdown-content">
+                                        <a href="LogSign/login.aspx">Hyr</a>
+                                        <%--<a href="#">Dil</a>--%>
+                                        
+                                      </div>
+                                    </div>
+
+						 </li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+
+  <a href="#" id="scroll-to-top" class="new-btn-d br-2"><i class="fa fa-angle-up"></i></a> 
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+
+            </asp:ContentPlaceHolder>
+			
+        </div>
+    
+	<!-- ALL JS FILES -->
+	<script src="health-lab/js/jquery.min.js"></script>
+	<script src="health-lab/js/popper.min.js"></script>
+	<script src="health-lab/js/bootstrap.min.js"></script>
+	<!-- ALL PLUGINS -->
+	<script src="health-lab/js/jquery.magnific-popup.min.js"></script>
+	<script src="health-lab/js/jquery.pogo-slider.min.js"></script>
+	<script src="health-lab/js/slider-index.js"></script>
+	<script src="health-lab/js/smoothscroll.js"></script>
+	<script src="health-lab/js/TweenMax.min.js"></script>
+	<script src="health-lab/js/main.js"></script>
+	<script src="health-lab/js/owl.carousel.min.js"></script>
+	<script src="health-lab/js/form-validator.min.js"></script>
+	<script src="health-lab/js/contact-form-script.js"></script>
+	<script src="health-lab/js/isotope.min.js"></script>
+	<script src="health-lab/js/images-loded.min.js"></script>
+	<script src="health-lab/js/custom.js"></script>
+</body>
+</html>

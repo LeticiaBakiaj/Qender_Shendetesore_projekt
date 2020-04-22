@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F2EA0E7-240C-40A2-AAC1-1D83BB00A056}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>projekt</RootNamespace>
+    <AssemblyName>projekt</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44395</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="admin.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Dermatologjia.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="health-lab\css\animate.css" />
+    <Content Include="health-lab\css\bootstrap.min.css" />
+    <Content Include="health-lab\css\custom.css" />
+    <Content Include="health-lab\css\flashy.min.css" />
+    <Content Include="health-lab\css\flaticon.css" />
+    <Content Include="health-lab\css\font-awesome.min.css" />
+    <Content Include="health-lab\css\magnific-popup.css" />
+    <Content Include="health-lab\css\owl.carousel.min.css" />
+    <Content Include="health-lab\css\pogo-slider.min.css" />
+    <Content Include="health-lab\css\responsive.css" />
+    <Content Include="health-lab\css\responsiveslides.css" />
+    <Content Include="health-lab\css\style.css" />
+    <Content Include="health-lab\css\timeline.css" />
+    <Content Include="health-lab\fonts\Flaticon.svg" />
+    <Content Include="health-lab\fonts\fontawesome-webfont.svg" />
+    <Content Include="health-lab\images\about-img-01.jpg" />
+    <Content Include="health-lab\images\about-img-02.jpg" />
+    <Content Include="health-lab\images\about-img-03.jpg" />
+    <Content Include="health-lab\images\alergologji-1170x480.jpg" />
+    <Content Include="health-lab\images\apple-touch-icon.png" />
+    <Content Include="health-lab\images\blog-img-01.jpg" />
+    <Content Include="health-lab\images\blog-img-02.jpg" />
+    <Content Include="health-lab\images\blog-img-03.jpg" />
+    <Content Include="health-lab\images\dermatologji-1170x480.jpg" />
+    <Content Include="health-lab\images\dore_zemer_slide.jpg" />
+    <Content Include="health-lab\images\favicon.ico" />
+    <Content Include="health-lab\images\footer-bg.jpg" />
+    <Content Include="health-lab\images\gallery-01.jpg" />
+    <Content Include="health-lab\images\gallery-02.jpg" />
+    <Content Include="health-lab\images\gallery-03.jpg" />
+    <Content Include="health-lab\images\gallery-04.jpg" />
+    <Content Include="health-lab\images\gallery-05.jpg" />
+    <Content Include="health-lab\images\gallery-06.jpg" />
+    <Content Include="health-lab\images\gallery-07.jpg" />
+    <Content Include="health-lab\images\gallery-08.jpg" />
+    <Content Include="health-lab\images\icc.ico" />
+    <Content Include="health-lab\images\img-1.jpg" />
+    <Content Include="health-lab\images\img-2.jpg" />
+    <Content Include="health-lab\images\img-3.jpg" />
+    <Content Include="health-lab\images\img1.jpg" />
+    <Content Include="health-lab\images\logo.png" />
+    <Content Include="health-lab\images\logonew.png" />
+    <Content Include="health-lab\images\menu-arrow.png" />
+    <Content Include="health-lab\images\okulistike-1170x480.jpg" />
+    <Content Include="health-lab\images\orl-1170x480.jpg" />
+    <Content Include="health-lab\images\pediatri-1170x480.jpg" />
+    <Content Include="health-lab\images\preloader.gif" />
+    <Content Include="health-lab\images\ptn-bg.jpg" />
+    <Content Include="health-lab\images\slide-ndertesa.jpg" />
+    <Content Include="health-lab\images\slider-01.jpg" />
+    <Content Include="health-lab\images\slider-02.jpg" />
+    <Content Include="health-lab\images\slider-03.jpg" />
+    <Content Include="health-lab\images\tag-line.png" />
+    <Content Include="health-lab\js\bootstrap.min.js" />
+    <Content Include="health-lab\js\contact-form-script.js" />
+    <Content Include="health-lab\js\custom.js" />
+    <Content Include="health-lab\js\dropdown.js" />
+    <Content Include="health-lab\js\form-validator.min.js" />
+    <Content Include="health-lab\js\images-loded.min.js" />
+    <Content Include="health-lab\js\isotope.min.js" />
+    <Content Include="health-lab\js\jquery.magnific-popup.min.js" />
+    <Content Include="health-lab\js\jquery.min.js" />
+    <Content Include="health-lab\js\jquery.pogo-slider.min.js" />
+    <Content Include="health-lab\js\main.js" />
+    <Content Include="health-lab\js\owl.carousel.min.js" />
+    <Content Include="health-lab\js\popper.min.js" />
+    <Content Include="health-lab\js\responsiveslides.min.js" />
+    <Content Include="health-lab\js\slider-index.js" />
+    <Content Include="health-lab\js\smoothscroll.js" />
+    <Content Include="health-lab\js\TweenMax.min.js" />
+    <Content Include="health-lab\php\form-process.php" />
+    <Content Include="LogSign\css\main.css" />
+    <Content Include="LogSign\css\util.css" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="LogSign\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="LogSign\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="LogSign\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="LogSign\fonts\JosefinSans\OFL.txt" />
+    <Content Include="LogSign\fonts\source-sans-pro\OFL.txt" />
+    <Content Include="LogSign\fonts\ubuntu\UFL.txt" />
+    <Content Include="LogSign\images\icons\favicon.ico" />
+    <Content Include="LogSign\images\icons\map-marker.png" />
+    <Content Include="LogSign\js\main.js" />
+    <Content Include="LogSign\login.aspx" />
+    <Content Include="LogSign\sign.aspx" />
+    <Content Include="LogSign\vendor\animate\animate.css" />
+    <Content Include="LogSign\vendor\animsition\css\animsition.css" />
+    <Content Include="LogSign\vendor\animsition\css\animsition.min.css" />
+    <Content Include="LogSign\vendor\animsition\js\animsition.js" />
+    <Content Include="LogSign\vendor\animsition\js\animsition.min.js" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="LogSign\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="LogSign\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="LogSign\vendor\bootstrap\js\popper.js" />
+    <Content Include="LogSign\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="LogSign\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="LogSign\vendor\countdowntime\countdowntime.js" />
+    <Content Include="LogSign\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="LogSign\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="LogSign\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="LogSign\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="LogSign\vendor\daterangepicker\moment.js" />
+    <Content Include="LogSign\vendor\daterangepicker\moment.min.js" />
+    <Content Include="LogSign\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="LogSign\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="LogSign\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="LogSign\vendor\select2\select2.css" />
+    <Content Include="LogSign\vendor\select2\select2.js" />
+    <Content Include="LogSign\vendor\select2\select2.min.css" />
+    <Content Include="LogSign\vendor\select2\select2.min.js" />
+    <Content Include="Master1.Master" />
+    <Content Include="health-lab\fonts\Flaticon.eot" />
+    <Content Include="health-lab\fonts\Flaticon.ttf" />
+    <Content Include="health-lab\fonts\Flaticon.woff" />
+    <Content Include="health-lab\fonts\fontawesome-webfont.eot" />
+    <Content Include="health-lab\fonts\fontawesome-webfont.ttf" />
+    <Content Include="health-lab\fonts\fontawesome-webfont.woff" />
+    <Content Include="health-lab\fonts\fontawesome-webfont.woff2" />
+    <Content Include="health-lab\fonts\FontAwesome.otf" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="LogSign\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="LogSign\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="LogSign\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="LogSign\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="LogSign\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="LogSign\fonts\JosefinSans\JosefinSans-Bold.ttf" />
+    <Content Include="LogSign\fonts\JosefinSans\JosefinSans-BoldItalic.ttf" />
+    <Content Include="LogSign\fonts\JosefinSans\JosefinSans-Italic.ttf" />
+    <Content Include="LogSign\fonts\JosefinSans\JosefinSans-Light.ttf" />
+    <Content Include="LogSign\fonts\JosefinSans\JosefinSans-LightItalic.ttf" />
+    <Content Include="LogSign\fonts\JosefinSans\JosefinSans-Regular.ttf" />
+    <Content Include="LogSign\fonts\JosefinSans\JosefinSans-SemiBold.ttf" />
+    <Content Include="LogSign\fonts\JosefinSans\JosefinSans-SemiBoldItalic.ttf" />
+    <Content Include="LogSign\fonts\JosefinSans\JosefinSans-Thin.ttf" />
+    <Content Include="LogSign\fonts\JosefinSans\JosefinSans-ThinItalic.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-Black.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-BlackItalic.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-Bold.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-BoldItalic.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-ExtraLight.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-ExtraLightItalic.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-Italic.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-Light.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-LightItalic.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-Regular.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-SemiBold.ttf" />
+    <Content Include="LogSign\fonts\source-sans-pro\SourceSansPro-SemiBoldItalic.ttf" />
+    <Content Include="LogSign\fonts\ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="LogSign\fonts\ubuntu\Ubuntu-BoldItalic.ttf" />
+    <Content Include="LogSign\fonts\ubuntu\Ubuntu-Italic.ttf" />
+    <Content Include="LogSign\fonts\ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="LogSign\fonts\ubuntu\Ubuntu-LightItalic.ttf" />
+    <Content Include="LogSign\fonts\ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="LogSign\fonts\ubuntu\Ubuntu-MediumItalic.ttf" />
+    <Content Include="LogSign\fonts\ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="LogSign\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Rezervim\fonts\JosefinSans\JosefinSans-Bold.ttf" />
+    <Content Include="Rezervim\fonts\JosefinSans\JosefinSans-BoldItalic.ttf" />
+    <Content Include="Rezervim\fonts\JosefinSans\JosefinSans-Italic.ttf" />
+    <Content Include="Rezervim\fonts\JosefinSans\JosefinSans-Light.ttf" />
+    <Content Include="Rezervim\fonts\JosefinSans\JosefinSans-LightItalic.ttf" />
+    <Content Include="Rezervim\fonts\JosefinSans\JosefinSans-Regular.ttf" />
+    <Content Include="Rezervim\fonts\JosefinSans\JosefinSans-SemiBold.ttf" />
+    <Content Include="Rezervim\fonts\JosefinSans\JosefinSans-SemiBoldItalic.ttf" />
+    <Content Include="Rezervim\fonts\JosefinSans\JosefinSans-Thin.ttf" />
+    <Content Include="Rezervim\fonts\JosefinSans\JosefinSans-ThinItalic.ttf" />
+    <Content Include="Rezervim\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="Rezervim\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="Rezervim\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="Rezervim\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-Bold.ttf" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-BoldItalic.ttf" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-ExtraBold.ttf" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-Italic.ttf" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-Light.ttf" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-LightItalic.ttf" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-Regular.otf" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-Regular.ttf" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-SemiBold.ttf" />
+    <Content Include="Rezervim\fonts\OpenSans\OpenSans-SemiBoldItalic.ttf" />
+    <Content Include="Rezervim\fonts\oswald\Oswald-Bold.ttf" />
+    <Content Include="Rezervim\fonts\oswald\Oswald-ExtraLight.ttf" />
+    <Content Include="Rezervim\fonts\oswald\Oswald-Light.ttf" />
+    <Content Include="Rezervim\fonts\oswald\Oswald-Medium.ttf" />
+    <Content Include="Rezervim\fonts\oswald\Oswald-Regular.ttf" />
+    <Content Include="Rezervim\fonts\oswald\Oswald-SemiBold.ttf" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Kryefaqja.aspx" />
+    <Content Include="Okulistika.aspx" />
+    <Content Include="ORL.aspx" />
+    <Content Include="Pediatria.aspx" />
+    <Content Include="profil.aspx" />
+    <Content Include="Rezervim\css\main.css" />
+    <Content Include="Rezervim\css\util.css" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Rezervim\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Rezervim\fonts\JosefinSans\OFL.txt" />
+    <Content Include="Rezervim\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="Rezervim\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="Rezervim\images\bg-01.jpg" />
+    <Content Include="Rezervim\images\icons\favicon.ico" />
+    <Content Include="Rezervim\images\icons\map-marker.png" />
+    <Content Include="Rezervim\images\img-01.png" />
+    <Content Include="Rezervim\js\main.js" />
+    <Content Include="Rezervim\js\map-custom.js" />
+    <Content Include="Rezervim\Rezervim.aspx" />
+    <Content Include="Rezervim\vendor\animate\animate.css" />
+    <Content Include="Rezervim\vendor\animsition\css\animsition.css" />
+    <Content Include="Rezervim\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Rezervim\vendor\animsition\js\animsition.js" />
+    <Content Include="Rezervim\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Rezervim\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Rezervim\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Rezervim\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Rezervim\vendor\bootstrap\js\popper.js" />
+    <Content Include="Rezervim\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Rezervim\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Rezervim\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Rezervim\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Rezervim\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Rezervim\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Rezervim\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Rezervim\vendor\daterangepicker\moment.js" />
+    <Content Include="Rezervim\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Rezervim\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Rezervim\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Rezervim\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Rezervim\vendor\select2\select2.css" />
+    <Content Include="Rezervim\vendor\select2\select2.js" />
+    <Content Include="Rezervim\vendor\select2\select2.min.css" />
+    <Content Include="Rezervim\vendor\select2\select2.min.js" />
+    <Content Include="Rreth_Nesh.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Sherbime.css" />
+    <Content Include="Sherbim_Alergologji.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dermatologjia.aspx.cs">
+      <DependentUpon>Dermatologjia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dermatologjia.aspx.designer.cs">
+      <DependentUpon>Dermatologjia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Kryefaqja.aspx.cs">
+      <DependentUpon>Kryefaqja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kryefaqja.aspx.designer.cs">
+      <DependentUpon>Kryefaqja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogSign\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogSign\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogSign\sign.aspx.cs">
+      <DependentUpon>sign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogSign\sign.aspx.designer.cs">
+      <DependentUpon>sign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master1.Master.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master1.Master.designer.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Okulistika.aspx.cs">
+      <DependentUpon>Okulistika.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Okulistika.aspx.designer.cs">
+      <DependentUpon>Okulistika.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ORL.aspx.cs">
+      <DependentUpon>ORL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ORL.aspx.designer.cs">
+      <DependentUpon>ORL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pediatria.aspx.cs">
+      <DependentUpon>Pediatria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pediatria.aspx.designer.cs">
+      <DependentUpon>Pediatria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profil.aspx.cs">
+      <DependentUpon>profil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profil.aspx.designer.cs">
+      <DependentUpon>profil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rezervim\Rezervim.aspx.cs">
+      <DependentUpon>Rezervim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rezervim\Rezervim.aspx.designer.cs">
+      <DependentUpon>Rezervim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rreth_Nesh.aspx.cs">
+      <DependentUpon>Rreth_Nesh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rreth_Nesh.aspx.designer.cs">
+      <DependentUpon>Rreth_Nesh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sherbim_Alergologji.aspx.cs">
+      <DependentUpon>Sherbim_Alergologji.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sherbim_Alergologji.aspx.designer.cs">
+      <DependentUpon>Sherbim_Alergologji.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63255</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44395/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
